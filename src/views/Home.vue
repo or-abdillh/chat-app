@@ -15,9 +15,18 @@
 				</span>
 			</template>
 		</Header>
+
+		<Searchbar />
+
+		<section>
+			<Chats :chats="chats" />
+		</section>
 	</main>
 </template>
 
 <script setup>
 	import Header from '@/components/Header.vue'
+	import Searchbar from '@/components/Searchbar.vue'
+	import Chats from '@/components/Chats.vue'
+	import chats from '@/chats.js'
 </script>
