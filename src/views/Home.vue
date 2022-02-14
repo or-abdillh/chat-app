@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main class="pb-24">
 		<Header>
 			<template v-slot:start>
 				<span>

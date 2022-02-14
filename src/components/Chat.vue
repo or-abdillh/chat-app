@@ -1,5 +1,5 @@
 <template>
-	<main class="w-full mb-3 flex justify-between items-center border-2 rounded-xl border-secondary py-2 px-3">
+	<main @click="openChat" class="w-full active:scale-90 duration-300 mb-3 flex justify-between items-center border-2 rounded-xl border-secondary py-2 px-3">
 
 		<div class="text-gray-50 flex justify-between items-start gap-5">
 			<div v-if="chat.avatar !== null">
@@ -26,6 +26,15 @@
 <script setup>
 
 	import Chat from '@/components/Chat.vue'
+	import { useRouter } from 'vue-router'
+
+	const router = useRouter()
+	const openChat = () => {
+		setTimeout(() => {
+			router.push({ name: 'Chat', params: { id: props.chat.id } })
+		}, 500)
+	}
+	
 	const props = defineProps({
 		chat: {
 			type: Object
