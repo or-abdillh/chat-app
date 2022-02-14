@@ -11,7 +11,11 @@
 	import { ref } from 'vue'
 
 	const state = useContacts()
+	const emits = defineEmits(['search'])
 	const keyword = ref('')
-	const setKeyword = () => state.setCurrentKeyword = keyword.value
+	const setKeyword = () => {
+	  state.setCurrentKeyword(keyword.value)
+	  emits('search')
+	}
 
 </script>

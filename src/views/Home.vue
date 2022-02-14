@@ -16,7 +16,7 @@
 			</template>
 		</Header>
 
-		<Searchbar />
+		<Searchbar v-on:search="searchAction" />
 
 		<section>
 			<Contacts :contacts="contacts" />
@@ -28,11 +28,17 @@
 
 <script setup>
 	import { useContacts } from '@/stores/contacts'
-	import { computed } from 'vue'
+	import { computed, watch, ref } from 'vue'
 	import Header from '@/components/Header.vue'
 	import Navbar from '@/components/Navbar.vue'
 	import Searchbar from '@/components/Searchbar.vue'
 	import Contacts from '@/components/Contacts.vue'
 
-	const contacts = computed(() => useContacts().contacts)
+	const contacts = ref(useContacts().contacts)
+	
+	const searchAction = () => {
+	  const currentKeyword = computed(() => useContacts().currentKeyword)
+	  contacts.value = useContacts().contacts.filter(contact => contact.name.toLowerCase().includes(currentKeyword.value.toLowerCase()))
+	}
+
 </script>

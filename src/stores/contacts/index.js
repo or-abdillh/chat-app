@@ -8,7 +8,7 @@ export const useContacts = defineStore('contacts', {
 			})
 		},
 		setCurrentKeyword(payload) {
-			this.contacts.currentKeyword = payload
+			this.currentKeyword = payload
 		}
 	},
 	state: () => {
@@ -27,7 +27,7 @@ export const useContacts = defineStore('contacts', {
 					},
 					{
 						id: 2,
-						avatar: 'null',
+						avatar: null,
 						name: 'Edwar Boy',
 						initial: 'EB',
 						lastMessage: 'Hi Ahmed! How\'s are you?',
@@ -77,7 +77,7 @@ export const useContacts = defineStore('contacts', {
 					},
 					{
 						id: 7,
-						avatar: 'null',
+						avatar: null,
 						name: 'James Smith',
 						initial: 'JS',
 						lastMessage: 'Aowkaoawkoakwokawl',

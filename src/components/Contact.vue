@@ -1,11 +1,11 @@
 <template>
 	<main @click="openChat" class="w-full active:scale-90 duration-300 mb-3 flex justify-between items-center border-2 rounded-xl border-secondary py-2 px-3">
 		<div class="text-gray-50 flex justify-between items-start gap-5">
-			<div v-if="contact.avatar != null">
+			<div v-if="contact.avatar !== null">
 				<img width="60" class="rounded-lg" :src="contact.avatar" />
 			</div>
 			
-			<div class="text-gray-50 p-5 rounded-lg bg-blue-600" v-else-if="chat.avatar === null">
+			<div class="text-gray-50 p-5 rounded-lg bg-blue-600" v-else-if="contact.avatar === null">
 				{{ contact.initial }}
 			</div>
 
@@ -27,7 +27,8 @@
 	import { useRouter } from 'vue-router'
 	import { useContacts } from '@/stores/contacts'
 	import { computed } from 'vue'
-
+  
+  const router = useRouter()
 	const openChat = () => {
 		setTimeout(() => {
 			router.push({ name: 'Chat', params: { id: props.contact.id } })
@@ -39,8 +40,6 @@
 			type: Object
 		}
 	})
-
-	console.log(props.contact.avatar)
 
 	const generatePreviewText = text => {
 		const textArr = text.split('')
