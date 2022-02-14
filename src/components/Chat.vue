@@ -10,9 +10,9 @@
 				{{ chat.initial }}
 			</div>
 
-			<div>
-				<h1>{{ chat.name }}</h1>
-				<p class="text-xs">{{ chat.lastMessage.split('').slice(0, 25).join('') }}</p>
+			<div class="text-gray-100">
+				<h1 class="text-xl font-medium mb-2">{{ chat.name }}</h1>
+				<p class="text-xs">{{ generatePreviewText(chat.lastMessage) }}</p>
 			</div>
 		</div>
 
@@ -31,5 +31,11 @@
 			type: Object
 		}
 	})
+
+	const generatePreviewText = text => {
+		const textArr = text.split('')
+		if (textArr.length < 25) return textArr.join('')
+		else return textArr.slice(0, 25).join('') + '...'
+	}
 
 </script>
