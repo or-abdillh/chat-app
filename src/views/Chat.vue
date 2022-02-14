@@ -33,7 +33,7 @@
 
 	import { useRoute, useRouter } from 'vue-router'
 	import { computed, ref, onMounted } from 'vue'
-	import chats from '@/chats.js'
+	import { useContacts } from '@/stores/contacts'
 	import Header from '@/components/Header.vue'
 	import ChatAction from '@/components/ChatAction.vue'
 	import RoomChat from '@/components/RoomChat.vue'
@@ -41,9 +41,10 @@
 	const router = useRouter()
 	const route = useRoute()
 	const container = ref(null)
+	const state = useContacts()
 
 	const paramsId = computed(() => route.params.id)
-	const profile = chats.filter( e => e.id == paramsId.value )
+	const profile = state.contacts.filter( e => e.id == paramsId.value )
 
 	const back = () => {
 		setTimeout(() => {

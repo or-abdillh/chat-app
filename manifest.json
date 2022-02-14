@@ -1,7 +1,7 @@
 {
-  "name": "Vue Tailwind - A simple starter template",
-  "short_name": "Vue Tailwind",
-  "theme_color": "#FFFFFF",
+  "name": "Chat App - Vue JS - Tailwindcss - Pinia",
+  "short_name": "Chat App",
+  "theme_color": "#0F1829",
   "background_color": "#FFFFFF",
   "display": "standalone",
   "orientation": "portrait",

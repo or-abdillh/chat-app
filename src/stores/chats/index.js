@@ -5,12 +5,39 @@ export const useChats = defineStore('chats', {
 		return {
 			chats: [
 				{
-					text: 'This is example response',
-					left: false
+					text: 'Sure we are going to plazamart now',
+					left: true,
+					id: 1
 				},
 				{
-					text: 'The position of your chat will be randomized so that it allows you to create a chat from different sides 😀',
-					left: true
+					text: 'Hi Ahmed! How\'s are you?',
+					left: true,
+					id: 2
+				},
+				{
+					text: 'I am contacting you because am very hungry',
+					left: true,
+					id: 3
+				},
+				{
+					text: 'Hi bruuh :>',
+					left: true,
+					id: 4
+				},
+				{
+					text: 'hello friend 😀',
+					left: true,
+					id: 5
+				},
+				{
+					text: '😂😂😂😂',
+					left: true,
+					id: 6
+				},
+				{
+					text: 'Aowkaoawkoakwokawl',
+					left: true,
+					id: 7
 				}
 			]
 		}

@@ -15,18 +15,28 @@
 <script setup>
 
 	import { useChats } from '@/stores/chats'
-	import { ref } from 'vue'
+	import { useContacts } from '@/stores/contacts'
+	import { useRoute } from 'vue-router'
+	import { ref, computed } from 'vue'
 
-	const chats = useChats()
-	const textField = ref('')
 	const emits = defineEmits(['newChat'])
+	const chats = useChats()
+	const contacts = useContacts()
+	const route = useRoute()
+	const textField = ref('')
+
+	const paramsId = computed(() => route.params.id)
+	
 	const newChat = () => {
 
 		if (textField.value.split('').length > 0) {
 			chats.addingNewChat({
 				text: textField.value,
-				left: Boolean(Math.floor(Math.random() * 2))
+				left: Boolean(Math.floor(Math.random() * 2)),
+				id: paramsId.value
 			})
+
+			contacts.setLastMessage(textField.value, paramsId.value)
 			emits('newChat')
 		}
 
