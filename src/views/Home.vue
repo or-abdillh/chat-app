@@ -21,11 +21,14 @@
 		<section>
 			<Chats :chats="chats" />
 		</section>
+
+		<Navbar />
 	</main>
 </template>
 
 <script setup>
 	import Header from '@/components/Header.vue'
+	import Navbar from '@/components/Navbar.vue'
 	import Searchbar from '@/components/Searchbar.vue'
 	import Chats from '@/components/Chats.vue'
 	import chats from '@/chats.js'

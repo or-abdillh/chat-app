@@ -8,6 +8,9 @@ module.exports = {
     	colors: {
     		primary: "#0F1829",
     		secondary: "#112130",
+    	},
+    	fontSize: {
+    		'xxs': '.45rem'
     	}
     },
   },
