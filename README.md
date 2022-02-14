@@ -1,35 +1,47 @@
-<h3 align="center">Vue Tailwind</h3>
-<p align="center">A simple starter template for Vue JS + Tailwind</p>
-
-<img src="./src/assets/banner.png" width="100%" alt="">
+<h3 align="center">Chat App</h3>
+<p align="center">Slicing project #08</p>
+<img src="./src/assets/banner.png" />
 
 ### About
-This is my project on creating a simple starter template for Vue JS and Tailwind.
+This is my projects to make UI using front end tech 
 
-Using the fixed layout concept, it is very suitable for developing web for a special mobile display
+Where the ideas and the concept i use from any other designer UI/UX from Instagram or Dribbble
 
-### Features
+### Original design
+by [Imelda](https://dribbble.com/shots/17486130-Chat-App)
+
+## Responsive Test
+<img src="./src/assets/responsive-banner.png" />
+
+## Languages and Tools
 - Vue JS 3
 - Tailwindcss
-- Pinia
-- Vue Router
+- Pinia state management
+- Vue router
 - Font Awesome 5
-- Google Font Poppins
-- Fixed layout
-- Script setup
-- Basic of components and props
-- Basic routing
-- Include web manifest and icons
+- Google Fonts Poppins
+- Vite JS
+- Git 
+- Github
+- Vercell
+- Termux
+- Micro Text Editor
 
-### Clone This Repo
-- <code>git clone https://github.com/or-abdillh/vue-tailwind.git </code>
-- <code>cd vue-tailwind</code>
+### How to install
+- <code>git clone https://github.com/or-abdillh/chat-app.git </code>
+- <code>cd chat-app</code>
 - <code>npm install</code>
 - <code>npm run dev</code>
 
 ### Demo 
-- [Vue Tailwind](https://vue-tailwind-starter.vercel.app/)
+- [Chat App](https://chat-app-ui.vercel.app/)
+- [Instagram](https://www.instagram.com/p/CZwzrLTPA1e/?utm_medium=copy_link)
+
+### Thanks 
+- Support me with a cup of coffee and other snacks [here ..](https://saweria.co/orabdillh)
+- Don't forget to give me star in this repository 🙏🏻🙏🏻
+- See my other projects on instagram [@or.abdillh](http://www.instagram.com/or.abdillh)
 
 [Oka R Abdillah ](http://github.com/or-abdillh)
 <br>
-Last edited on : 30/01/2022
+Last edited on : 14/02/2022
