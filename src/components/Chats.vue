@@ -1,5 +1,5 @@
 <template>
-	<main class="mt-16">
+	<main class="mt-10">
 		<template v-for="(chat, x) in chats" :key="x">
 			<Chat :chat="chat" />
 		</template>

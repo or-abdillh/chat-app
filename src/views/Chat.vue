@@ -1,5 +1,5 @@
 <template>
-	<main class="pt-12">
+	<main ref="container" class="py-12">
 		<Header>
 			<template v-slot:start>
 				<div class="flex gap-3 items-center">
@@ -17,22 +17,22 @@
 
 			<template v-slot:end>
 				<div class="text-xl">
-					<i class="fa fa-phone mr-5"></i>
-					<i class="fa fa-video"></i>
+					<i class="active:scale-90 duration-300 fa fa-phone mr-5"></i>
+					<i class="active:scale-90 duration-300 fa fa-video"></i>
 				</div>
 			</template>
 		</Header>
 
 		<RoomChat :lastMessage="profile[0].lastMessage" />
 
-		<ChatAction />
+		<ChatAction v-on:newChat="scrollToBottom" />
 	</main>
 </template>
 
 <script setup>
 
 	import { useRoute, useRouter } from 'vue-router'
-	import { computed } from 'vue'
+	import { computed, ref, onMounted } from 'vue'
 	import chats from '@/chats.js'
 	import Header from '@/components/Header.vue'
 	import ChatAction from '@/components/ChatAction.vue'
@@ -40,6 +40,7 @@
 
 	const router = useRouter()
 	const route = useRoute()
+	const container = ref(null)
 
 	const paramsId = computed(() => route.params.id)
 	const profile = chats.filter( e => e.id == paramsId.value )
@@ -48,6 +49,16 @@
 		setTimeout(() => {
 			router.go(-1)
 		}, 500)
+	}
+	
+	onMounted(() => scrollToBottom())
+
+	const scrollToBottom = () => {
+		let el = container.value
+		el.scrollIntoView(false, {
+		  behavior: 'smooth',
+		  block: 'end'
+		})
 	}
 	
 </script>

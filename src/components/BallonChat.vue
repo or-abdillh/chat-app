@@ -19,4 +19,6 @@
 		}
 	})
 
+	const emits = defineEmits(["newChat"])
+
 </script>

@@ -40,5 +40,35 @@ export default [
 		unReadMessage: 1,
 		timestamp: '11:00',
 		status: 'offline'
+	},
+	{
+		id: 5,
+		avatar: '/profile.jpg',
+		name: 'Bruno Fernandes',
+		initial: 'BF',
+		lastMessage: 'hello friend 😀',
+		unReadMessage: 0,
+		timestamp: '12:00',
+		status: 'online'
+	},
+	{
+		id: 6,
+		avatar: null,
+		name: 'Elkan Shaw',
+		initial: 'ES',
+		lastMessage: '😂😂😂😂',
+		unReadMessage: 1,
+		timestamp: '21:00',
+		status: 'offline'
+	},
+	{
+		id: 7,
+		avatar: null,
+		name: 'James Smith',
+		initial: 'JS',
+		lastMessage: 'Aowkaoawkoakwokawl',
+		unReadMessage: 1,
+		timestamp: '11:00',
+		status: 'offline'
 	}
 ]
