@@ -34,8 +34,7 @@ by [Imelda](https://dribbble.com/shots/17486130-Chat-App)
 - <code>npm run dev</code>
 
 ### Demo 
-- [Chat App](https://chat-app-ui.vercel.app/)
-- [Instagram](https://www.instagram.com/p/CZwzrLTPA1e/?utm_medium=copy_link)
+- [Chat App](https://chat-app-1-one.vercel.app/)
 
 ### Thanks 
 - Support me with a cup of coffee and other snacks [here ..](https://saweria.co/orabdillh)
