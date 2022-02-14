@@ -1,5 +1,5 @@
 <template>
-	<main>
+	<main class="pt-12">
 		<Header>
 			<template v-slot:start>
 				<div class="flex gap-3 items-center">
@@ -23,6 +23,8 @@
 			</template>
 		</Header>
 
+		<RoomChat :lastMessage="profile[0].lastMessage" />
+
 		<ChatAction />
 	</main>
 </template>
@@ -34,6 +36,7 @@
 	import chats from '@/chats.js'
 	import Header from '@/components/Header.vue'
 	import ChatAction from '@/components/ChatAction.vue'
+	import RoomChat from '@/components/RoomChat.vue'
 
 	const router = useRouter()
 	const route = useRoute()
