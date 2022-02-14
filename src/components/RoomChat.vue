@@ -19,10 +19,4 @@
 	const paramsId = computed(() => route.params.id)
 	const chats = computed(() => state.chats.filter(chat => chat.id == paramsId.value))
 	
-	const props = defineProps({
-		lastMessage: {
-			type: String,
-			default: 'random string'
-		}
-	})
 </script>

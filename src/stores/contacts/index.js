@@ -6,10 +6,14 @@ export const useContacts = defineStore('contacts', {
 			this.contacts.forEach(contact => {
 				if (contact.id == id) contact.lastMessage = payload
 			})
+		},
+		setCurrentKeyword(payload) {
+			this.contacts.currentKeyword = payload
 		}
 	},
 	state: () => {
 		return {
+			currentKeyword: '',
 			contacts: [
 				{
 						id: 1,
@@ -23,7 +27,7 @@ export const useContacts = defineStore('contacts', {
 					},
 					{
 						id: 2,
-						avatar: null,
+						avatar: 'null',
 						name: 'Edwar Boy',
 						initial: 'EB',
 						lastMessage: 'Hi Ahmed! How\'s are you?',
@@ -73,7 +77,7 @@ export const useContacts = defineStore('contacts', {
 					},
 					{
 						id: 7,
-						avatar: null,
+						avatar: 'null',
 						name: 'James Smith',
 						initial: 'JS',
 						lastMessage: 'Aowkaoawkoakwokawl',

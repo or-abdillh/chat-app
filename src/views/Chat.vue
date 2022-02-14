@@ -23,7 +23,7 @@
 			</template>
 		</Header>
 
-		<RoomChat :lastMessage="profile[0].lastMessage" />
+		<RoomChat />
 
 		<ChatAction v-on:newChat="scrollToBottom" />
 	</main>

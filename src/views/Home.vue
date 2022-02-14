@@ -19,7 +19,7 @@
 		<Searchbar />
 
 		<section>
-			<Chats :chats="chats" />
+			<Contacts :contacts="contacts" />
 		</section>
 
 		<Navbar />
@@ -32,8 +32,7 @@
 	import Header from '@/components/Header.vue'
 	import Navbar from '@/components/Navbar.vue'
 	import Searchbar from '@/components/Searchbar.vue'
-	import Chats from '@/components/Chats.vue'
+	import Contacts from '@/components/Contacts.vue'
 
-	const state = useContacts()
-	const chats = computed(() => state.contacts)
+	const contacts = computed(() => useContacts().contacts)
 </script>
