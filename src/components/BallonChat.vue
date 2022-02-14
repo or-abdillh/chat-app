@@ -1,5 +1,5 @@
 <template>
-	<main class="w-full mb-8 flex" :class="left ? '' : 'flex-row-reverse'">
+	<main class="w-full mb-5 flex" :class="left ? '' : 'flex-row-reverse'">
 		<div :class="left ? 'rounded-bl-none bg-secondary' : 'rounded-br-none bg-blue-800'" class="text-gray-100 px-3 py-5 w-8/12 rounded-3xl text-sm">
 			{{ text }}
 		</div>

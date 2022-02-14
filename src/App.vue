@@ -6,6 +6,6 @@
 
 <style scoped>
 	.app {
-		@apply min-h-screen bg-primary p-5 w-full md:w-6/12 lg:w-5/12 md:mx-auto xl:w-4/12
+		@apply min-h-screen bg-primary p-5 lg:p-5 w-full md:px-28 lg:w-4/12 md:mx-auto xl:w-3/12
 	}
 </style>
