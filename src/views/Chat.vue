@@ -22,6 +22,8 @@
 				</div>
 			</template>
 		</Header>
+
+		<ChatAction />
 	</main>
 </template>
 
@@ -31,6 +33,7 @@
 	import { computed } from 'vue'
 	import chats from '@/chats.js'
 	import Header from '@/components/Header.vue'
+	import ChatAction from '@/components/ChatAction.vue'
 
 	const router = useRouter()
 	const route = useRoute()
